@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +21,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    self.tabController = [[UITabBarController alloc] init];
+
+    FirstViewController *first = [[FirstViewController alloc] init];
+    first.title = @"第一页";
+    SecondViewController *second = [[SecondViewController alloc] init];
+    second.title = @"第二页";
+    ThirdViewController *third = [[ThirdViewController alloc] init];
+    third.title = @"第三页";
+
+    //分别管理三个不同的栈
+    UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:first];
+    UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:second];
+    UINavigationController *naviThird = [[UINavigationController alloc] initWithRootViewController:third];
+
+    self.tabController.viewControllers = @[naviFirst,naviSecond,naviThird];
+    self.window.rootViewController = self.tabController;
+
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
