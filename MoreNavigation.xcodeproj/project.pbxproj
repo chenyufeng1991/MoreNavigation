@@ -23,6 +23,7 @@
 		711E6B451CD26713008D6789 /* FifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711E6B431CD26713008D6789 /* FifthViewController.xib */; };
 		711E6B491CD26746008D6789 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711E6B471CD26746008D6789 /* InsertViewController.m */; };
 		711E6B4A1CD26746008D6789 /* InsertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711E6B481CD26746008D6789 /* InsertViewController.xib */; };
+		711E6B4D1CD2F18C008D6789 /* GlobalKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 711E6B4C1CD2F18C008D6789 /* GlobalKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		711E6B461CD26746008D6789 /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
 		711E6B471CD26746008D6789 /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
 		711E6B481CD26746008D6789 /* InsertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsertViewController.xib; sourceTree = "<group>"; };
+		711E6B4B1CD2F18C008D6789 /* GlobalKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalKit.h; sourceTree = "<group>"; };
+		711E6B4C1CD2F18C008D6789 /* GlobalKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				711E6B461CD26746008D6789 /* InsertViewController.h */,
 				711E6B471CD26746008D6789 /* InsertViewController.m */,
 				711E6B481CD26746008D6789 /* InsertViewController.xib */,
+				711E6B4B1CD2F18C008D6789 /* GlobalKit.h */,
+				711E6B4C1CD2F18C008D6789 /* GlobalKit.m */,
 				711E6B221CD26630008D6789 /* Assets.xcassets */,
 				711E6B241CD26630008D6789 /* LaunchScreen.storyboard */,
 				711E6B271CD26630008D6789 /* Info.plist */,
@@ -194,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711E6B4D1CD2F18C008D6789 /* GlobalKit.m in Sources */,
 				711E6B3F1CD266FD008D6789 /* FourthViewController.m in Sources */,
 				711E6B351CD266A0008D6789 /* SecondViewController.m in Sources */,
 				711E6B3A1CD266E9008D6789 /* ThirdViewController.m in Sources */,
@@ -342,6 +348,7 @@
 				711E6B2C1CD26630008D6789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
