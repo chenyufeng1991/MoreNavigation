@@ -42,6 +42,9 @@
     self.tabController.viewControllers = @[naviFirst,naviSecond,naviThird];
     self.window.rootViewController = self.tabController;
 
+    //有时候，如果根视图是NavigationController的话，会看到以[self.window addSubview:self.naviController.view];这种方式来设置根视图。
+    //个人还是推荐self.window.rootViewContoller = self.naviController;的方式设置。
+
     //设置为主window并显示，否则启动后是黑屏
     [self.window makeKeyAndVisible];
 
