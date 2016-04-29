@@ -21,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //如果本身默认使用storyboard,就不需要window的初始化
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
 
@@ -33,7 +34,7 @@
     ThirdViewController *third = [[ThirdViewController alloc] init];
     third.title = @"第三页";
 
-    //分别管理三个不同的栈
+    //分别管理三个不同的栈，其实就是三个不同的Navigation
     UINavigationController *naviFirst = [[UINavigationController alloc] initWithRootViewController:first];
     UINavigationController *naviSecond = [[UINavigationController alloc] initWithRootViewController:second];
     UINavigationController *naviThird = [[UINavigationController alloc] initWithRootViewController:third];
@@ -41,6 +42,7 @@
     self.tabController.viewControllers = @[naviFirst,naviSecond,naviThird];
     self.window.rootViewController = self.tabController;
 
+    //设置为主window并显示，否则启动后是黑屏
     [self.window makeKeyAndVisible];
 
     return YES;

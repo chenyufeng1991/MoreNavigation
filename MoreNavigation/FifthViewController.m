@@ -36,6 +36,7 @@
 
 - (IBAction)backToTab2ButtonClicked:(id)sender
 {
+    //判断前面有没有SecondViewController，有的话pop到SecondViewController页面，否则不进行跳转
     for (UIViewController *vc in self.navigationController.viewControllers)
     {
         if ([vc isKindOfClass:[SecondViewController class]])

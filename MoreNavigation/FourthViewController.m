@@ -38,13 +38,17 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-
+/**
+ *  这里的需求是，判断我的界面栈前面有没有FirstViewController,如果有的话，在FirstViewController后面插入一个InsertViewController,然后从当前界面pop到InsertViewController，InsertViewController可以pop到FirstViewController。
+ 否则，点击按钮不执行任何操作
+ *
+ */
 - (IBAction)insertButtonClicked:(id)sender {
     NSMutableArray *pageArray = [self.navigationController.viewControllers mutableCopy];
     for (int i = 0; i < pageArray.count; i++)
     {
         id vc = pageArray[i];
-        //找到要插入页面的前一个界面
+        //找到要插入页面的前一个界面，这里就是FirstViewController
         if ([vc isKindOfClass:[FirstViewController class]])
         {
             InsertViewController *insert = [[InsertViewController alloc] init];

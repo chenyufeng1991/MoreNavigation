@@ -11,6 +11,7 @@
 
 @implementation GlobalKit
 
+//打印当前界面的栈，使用方便
 + (void)viewControllersArray:(UIViewController *)viewController
 {
     NSArray *vcArray = viewController.navigationController.viewControllers;
