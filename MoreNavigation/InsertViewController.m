@@ -9,6 +9,7 @@
 //
 
 #import "InsertViewController.h"
+#import "GlobalKit.h"
 
 @interface InsertViewController ()
 
@@ -19,7 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"被插入的页面";
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [GlobalKit viewControllersArray:self];
 }
 
 @end

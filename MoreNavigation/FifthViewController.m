@@ -9,6 +9,8 @@
 //
 
 #import "FifthViewController.h"
+#import "GlobalKit.h"
+#import "SecondViewController.h"
 
 @interface FifthViewController ()
 
@@ -19,7 +21,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"第五页";
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [GlobalKit viewControllersArray:self];
+}
+
+- (IBAction)backRootVCButtonClicked:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)backToTab2ButtonClicked:(id)sender
+{
+    for (UIViewController *vc in self.navigationController.viewControllers)
+    {
+        if ([vc isKindOfClass:[SecondViewController class]])
+        {
+            [self.navigationController popToViewController:vc animated:YES];
+            return;
+        }
+    }
 }
 
 @end

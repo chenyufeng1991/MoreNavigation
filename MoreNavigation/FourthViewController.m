@@ -10,8 +10,9 @@
 
 #import "FourthViewController.h"
 #import "GlobalKit.h"
-#import "FifthViewController.h"
+#import "FirstViewController.h"
 #import "InsertViewController.h"
+#import "FifthViewController.h"
 
 @interface FourthViewController ()
 
@@ -44,7 +45,7 @@
     {
         id vc = pageArray[i];
         //找到要插入页面的前一个界面
-        if ([vc isKindOfClass:[FifthViewController class]])
+        if ([vc isKindOfClass:[FirstViewController class]])
         {
             InsertViewController *insert = [[InsertViewController alloc] init];
             //插入界面栈
